@@ -3,7 +3,7 @@
 Node::Node() {
     latitude_ = 0;
     longitude_ = 0;
-    id = "XXX";
+    id_ = "XXX";
 }
 
 Node::Node(long latitude, long longitude, string id) {
@@ -17,11 +17,11 @@ long Node::getLatitude() {
 }
 
 long Node::getLongitude() {
-    return longitude_
+    return longitude_;
 }
 
 string Node::getId() {
-    return id;
+    return id_;
 }
 
 

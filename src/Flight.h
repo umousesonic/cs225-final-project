@@ -7,7 +7,7 @@
 using namespace std;
 
 class Flight {
-    public:()
+    public:
         Flight(string id, string from, string to);
 
     private:
@@ -15,4 +15,4 @@ class Flight {
         string from_;
         string to_;
 
-}
+};

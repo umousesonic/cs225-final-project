@@ -13,4 +13,4 @@ class Edge {
 
     private:
         vector<Flight*> flights_;
-}
+};

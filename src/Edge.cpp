@@ -5,5 +5,5 @@ Edge::Edge() {
 }
 
 void Edge::addFlight(Flight* flight) {
-    flights_.push_back(flights);
+    flights_.push_back(flight);
 }

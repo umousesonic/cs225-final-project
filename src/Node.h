@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Edge.h"
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -18,5 +20,5 @@ class Node {
         long latitude_;
         long longitude_;
         string id_;
-        vector<> edges_;
-}
+        vector<Edge*> edges_;
+};

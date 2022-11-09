@@ -17,6 +17,6 @@ class Parser {
         // vector<Node*> parseRoutes(); // ??????????
 
     private:
-        vector<vector<string>> csvector;
-        string filename;
-}
+        vector<vector<string>> csvector_;
+        string filename_;
+};
