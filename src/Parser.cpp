@@ -6,6 +6,7 @@
 
 Parser::Parser(string filename) {
     filename_ = filename;
+    readFile(filename_);
 }
 Parser::Parser() {
     filename_ = "";
