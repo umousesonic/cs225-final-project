@@ -57,18 +57,18 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/CS225/cs225-final-project
+CMAKE_SOURCE_DIR = /home/umouse/Desktop/cs225/cs225-final-project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/CS225/cs225-final-project/build
+CMAKE_BINARY_DIR = /home/umouse/Desktop/cs225/cs225-final-project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /workspaces/CS225/cs225-final-project/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspaces/CS225/cs225-final-project/build/CMakeFiles /workspaces/CS225/cs225-final-project/build/src//CMakeFiles/progress.marks
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/CS225/cs225-final-project/build/CMakeFiles 0
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/umouse/Desktop/cs225/cs225-final-project/build/CMakeFiles /home/umouse/Desktop/cs225/cs225-final-project/build/src//CMakeFiles/progress.marks
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/umouse/Desktop/cs225/cs225-final-project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,23 +103,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /workspaces/CS225/cs225-final-project/build && $(CMAKE_COMMAND) -P /workspaces/CS225/cs225-final-project/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspaces/CS225/cs225-final-project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(CMAKE_COMMAND) -P /home/umouse/Desktop/cs225/cs225-final-project/build/CMakeFiles/VerifyGlobs.cmake
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/src.dir/rule:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/src.dir/rule
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/src.dir/rule
 .PHONY : src/CMakeFiles/src.dir/rule
 
 # Convenience name for target.
@@ -128,7 +128,7 @@ src: src/CMakeFiles/src.dir/rule
 
 # fast build rule for target.
 src/fast:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
 .PHONY : src/fast
 
 Edge.o: Edge.cpp.o
@@ -136,7 +136,7 @@ Edge.o: Edge.cpp.o
 
 # target to build an object file
 Edge.cpp.o:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Edge.cpp.o
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Edge.cpp.o
 .PHONY : Edge.cpp.o
 
 Edge.i: Edge.cpp.i
@@ -144,7 +144,7 @@ Edge.i: Edge.cpp.i
 
 # target to preprocess a source file
 Edge.cpp.i:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Edge.cpp.i
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Edge.cpp.i
 .PHONY : Edge.cpp.i
 
 Edge.s: Edge.cpp.s
@@ -152,7 +152,7 @@ Edge.s: Edge.cpp.s
 
 # target to generate assembly for a file
 Edge.cpp.s:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Edge.cpp.s
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Edge.cpp.s
 .PHONY : Edge.cpp.s
 
 Node.o: Node.cpp.o
@@ -160,7 +160,7 @@ Node.o: Node.cpp.o
 
 # target to build an object file
 Node.cpp.o:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Node.cpp.o
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Node.cpp.o
 .PHONY : Node.cpp.o
 
 Node.i: Node.cpp.i
@@ -168,7 +168,7 @@ Node.i: Node.cpp.i
 
 # target to preprocess a source file
 Node.cpp.i:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Node.cpp.i
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Node.cpp.i
 .PHONY : Node.cpp.i
 
 Node.s: Node.cpp.s
@@ -176,7 +176,7 @@ Node.s: Node.cpp.s
 
 # target to generate assembly for a file
 Node.cpp.s:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Node.cpp.s
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Node.cpp.s
 .PHONY : Node.cpp.s
 
 Parser.o: Parser.cpp.o
@@ -184,7 +184,7 @@ Parser.o: Parser.cpp.o
 
 # target to build an object file
 Parser.cpp.o:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Parser.cpp.o
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Parser.cpp.o
 .PHONY : Parser.cpp.o
 
 Parser.i: Parser.cpp.i
@@ -192,7 +192,7 @@ Parser.i: Parser.cpp.i
 
 # target to preprocess a source file
 Parser.cpp.i:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Parser.cpp.i
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Parser.cpp.i
 .PHONY : Parser.cpp.i
 
 Parser.s: Parser.cpp.s
@@ -200,7 +200,7 @@ Parser.s: Parser.cpp.s
 
 # target to generate assembly for a file
 Parser.cpp.s:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Parser.cpp.s
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Parser.cpp.s
 .PHONY : Parser.cpp.s
 
 flight.o: flight.cpp.o
@@ -208,7 +208,7 @@ flight.o: flight.cpp.o
 
 # target to build an object file
 flight.cpp.o:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/flight.cpp.o
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/flight.cpp.o
 .PHONY : flight.cpp.o
 
 flight.i: flight.cpp.i
@@ -216,7 +216,7 @@ flight.i: flight.cpp.i
 
 # target to preprocess a source file
 flight.cpp.i:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/flight.cpp.i
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/flight.cpp.i
 .PHONY : flight.cpp.i
 
 flight.s: flight.cpp.s
@@ -224,7 +224,7 @@ flight.s: flight.cpp.s
 
 # target to generate assembly for a file
 flight.cpp.s:
-	cd /workspaces/CS225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/flight.cpp.s
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/flight.cpp.s
 .PHONY : flight.cpp.s
 
 # Help Target
@@ -259,7 +259,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /workspaces/CS225/cs225-final-project/build && $(CMAKE_COMMAND) -P /workspaces/CS225/cs225-final-project/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspaces/CS225/cs225-final-project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(CMAKE_COMMAND) -P /home/umouse/Desktop/cs225/cs225-final-project/build/CMakeFiles/VerifyGlobs.cmake
+	cd /home/umouse/Desktop/cs225/cs225-final-project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

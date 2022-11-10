@@ -11,12 +11,16 @@ using namespace std;
 
 class Parser {
     public:
+        Parser();
         Parser(string filename);
+        void readFile(string filename);
         vector<Node*> parseNodes();
         vector<Edge*> parseEdges();
         // vector<Node*> parseRoutes(); // ??????????
 
+        void printCsvector();
+
     private:
-        vector<vector<string>> csvector_;
+        vector<vector<string>*> csvector_;
         string filename_;
 };

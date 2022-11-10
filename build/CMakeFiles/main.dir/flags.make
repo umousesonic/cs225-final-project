@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/workspaces/CS225/cs225-final-project/lib -I/workspaces/CS225/cs225-final-project/src
+CXX_INCLUDES = -I/home/umouse/Desktop/cs225/cs225-final-project/lib -I/home/umouse/Desktop/cs225/cs225-final-project/src
 
 CXX_FLAGS =  -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -Wno-unused-function -g -D_GLIBCXX_DEBUG -O0 -gdwarf-4 -std=gnu++17
 
