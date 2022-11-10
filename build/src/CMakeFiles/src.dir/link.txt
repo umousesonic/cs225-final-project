@@ -1,2 +1,0 @@
-/usr/bin/ar qc libsrc.a CMakeFiles/src.dir/Edge.cpp.o CMakeFiles/src.dir/Node.cpp.o CMakeFiles/src.dir/Parser.cpp.o CMakeFiles/src.dir/flight.cpp.o
-/usr/bin/ranlib libsrc.a
