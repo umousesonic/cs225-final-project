@@ -11,14 +11,14 @@ using namespace std;
 class Node {
     public: 
         Node();
-        Node(long latitude, long longitude, string id); 
-        long getLatitude();
-        long getLongitude();
+        Node(double latitude, double longitude, string id); 
+        double getLatitude();
+        double getLongitude();
         string getId();
 
     private:
-        long latitude_;
-        long longitude_;
+        double latitude_;
+        double longitude_;
         string id_;
         vector<Edge*> edges_;
 };
