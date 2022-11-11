@@ -90,10 +90,20 @@ vector<Edge*> Parser::parseEdges() {
 // Function assumes that Airport.dat is the file that is being read
 vector<Node*> Parser::parseNodes() {
     vector<Node*> toReturn;
-    for (unsigned i = 0; i < csvector_.length(); i++) {
-        string id = csvector_[0];
-        long latitude = csvector_[6];
-        long longitude = csvector_[7];
+    for (unsigned i = 0; i < csvector_.size(); i++) {
+        string id = csvector_[i]->at(0);
+        string lati;
+        string longi;
+        // Checking if there is edge case of extra comma within line
+        if (csvector_[i]->size() > 14) {
+            lati = csvector_[i]->at(7);
+            longi = csvector_[i]->at(8);
+        } else {
+            lati = csvector_[i]->at(6);
+            longi = csvector_[i]->at(7);
+        }
+        double latitude = stod(lati);
+        double longitude = stod(longi);
         Node* insert = new Node(latitude, longitude, id);
         toReturn.push_back(insert);
     }

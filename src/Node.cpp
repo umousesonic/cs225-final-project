@@ -6,17 +6,17 @@ Node::Node() {
     id_ = "XXX";
 }
 
-Node::Node(long latitude, long longitude, string id) {
+Node::Node(double latitude, double longitude, string id) {
     latitude_ = latitude;
     longitude_ = longitude;
     id_ = id;
 }
 
-long Node::getLatitude() {
+double Node::getLatitude() {
     return latitude_;
 }
 
-long Node::getLongitude() {
+double Node::getLongitude() {
     return longitude_;
 }
 
