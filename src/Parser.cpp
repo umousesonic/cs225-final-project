@@ -85,3 +85,17 @@ vector<Edge*> Parser::parseEdges() {
     }
     return edges;
 }
+
+
+// Function assumes that Airport.dat is the file that is being read
+vector<Node*> Parser::parseNodes() {
+    vector<Node*> toReturn;
+    for (unsigned i = 0; i < csvector_.length(); i++) {
+        string id = csvector_[0];
+        long latitude = csvector_[6];
+        long longitude = csvector_[7];
+        Node* insert = new Node(latitude, longitude, id);
+        toReturn.push_back(insert);
+    }
+    return toReturn;
+}
