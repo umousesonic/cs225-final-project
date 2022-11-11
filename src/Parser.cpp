@@ -4,6 +4,7 @@
 #include <string>
 #include <sstream>
 
+
 Parser::Parser(string filename) {
     filename_ = filename;
     readFile(filename_);
@@ -58,4 +59,29 @@ void Parser::printCsvector() {
         }
         cout << ") " << endl;
     }
+}
+
+vector<Edge*> Parser::parseEdges() {
+    //Plan: get airline id, source airport id, destination id.
+    //std::vector<Edge*> edges;
+    
+    map<string, Edge*> edgemap;
+    for(size_t i = 0; i < csvector_.size(); i++) {
+        Flight* insertion = new Flight(csvector_[i]->at(1), csvector_[i]->at(3), csvector_[i]->at(5));
+        string pair1 = csvector_[i]->at(3) + " " + csvector_[i]->at(5);
+        string pair2 = csvector_[i]->at(5) + " " + csvector_[i]->at(3);
+        if (edgemap.count(pair1)) {
+            edgemap.at(pair1)->addFlight(insertion);
+        } else if (edgemap.count(pair2)) {
+            edgemap.at(pair2)->addFlight(insertion);
+        } else {
+            edgemap.insert(std::pair<string, Edge*>(pair1, new Edge()));
+            edgemap.at(pair1)->addFlight(insertion);
+        }
+    }
+    vector<Edge*> edges;
+    for(map<string, Edge*>::iterator it = edgemap.begin(); it != edgemap.end(); ++it) {
+        edges.push_back(it->second);
+    }
+    return edges;
 }

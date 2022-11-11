@@ -2,10 +2,12 @@
 
 #include "Node.h"
 #include "Edge.h"
+#include "Flight.h"
 
 #include <iostream>
 #include <vector>
 #include <string>
+#include <map>
 
 using namespace std;
 

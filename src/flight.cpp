@@ -6,3 +6,4 @@ Flight::Flight(string id, string from, string to) {
     from_ = from;
     to_ = to;
 }
+//Note: "flight.cpp" should be "Flight.cpp"
