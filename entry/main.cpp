@@ -20,11 +20,13 @@ int main() {
     edgeParser.readFile("../data/routes.dat.txt");
     vector<Edge*> edgepointers = edgeParser.parseEdges();
     cout << edgepointers.size() << endl;
+    size_t count = 0;
     for(size_t i = 0; i < edgepointers.size(); i++) {
         for(size_t j = 0; j < edgepointers.at(i)->countFlights(); j++) {
             cout << edgepointers.at(i)->getFlight(j)->getId() << "  ";
             cout << edgepointers.at(i)->getFlight(j)->getSource() << "  ";
             cout << edgepointers.at(i)->getFlight(j)->getDestination() << endl;
+            count++;
         }
         //cout << edgepointers.at(i)->getFlight(0)->getSource() << endl;
     }
