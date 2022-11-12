@@ -67,6 +67,11 @@ vector<Edge*> Parser::parseEdges() {
     
     map<string, Edge*> edgemap;
     for(size_t i = 0; i < csvector_.size(); i++) {
+        //Does not add edge if either the source or destination airport IDs are invalid.
+        //Note that this currently does not exclude invalid airline IDs.
+        if(csvector_[i]->at(3) == "\\N" || csvector_[i]->at(5) == "\\N") {
+            continue;
+        }
         Flight* insertion = new Flight(csvector_[i]->at(1), csvector_[i]->at(3), csvector_[i]->at(5));
         string pair1 = csvector_[i]->at(3) + " " + csvector_[i]->at(5);
         if (edgemap.count(pair1)) {
