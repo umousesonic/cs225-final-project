@@ -69,11 +69,8 @@ vector<Edge*> Parser::parseEdges() {
     for(size_t i = 0; i < csvector_.size(); i++) {
         Flight* insertion = new Flight(csvector_[i]->at(1), csvector_[i]->at(3), csvector_[i]->at(5));
         string pair1 = csvector_[i]->at(3) + " " + csvector_[i]->at(5);
-        string pair2 = csvector_[i]->at(5) + " " + csvector_[i]->at(3);
         if (edgemap.count(pair1)) {
             edgemap.at(pair1)->addFlight(insertion);
-        } else if (edgemap.count(pair2)) {
-            edgemap.at(pair2)->addFlight(insertion);
         } else {
             edgemap.insert(std::pair<string, Edge*>(pair1, new Edge()));
             edgemap.at(pair1)->addFlight(insertion);
