@@ -15,6 +15,7 @@ class Node {
         double getLatitude();
         double getLongitude();
         string getId();
+        void addEdge(Edge* input);
 
     private:
         double latitude_;

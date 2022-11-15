@@ -24,4 +24,8 @@ string Node::getId() {
     return id_;
 }
 
+void Node::addEdge(Edge* input) {
+    edges_.push_back(input);
+}
+
 
