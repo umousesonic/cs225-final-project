@@ -11,15 +11,17 @@ using namespace std;
 class Node {
     public: 
         Node();
-        Node(double latitude, double longitude, string id); 
+        Node(double latitude, double longitude, string id);
         double getLatitude();
         double getLongitude();
+        void addEdgeFrom(Edge* edge);
+        void addEdgeTo(Edge* edge);
         string getId();
-        void addEdge(Edge* input);
 
     private:
         double latitude_;
         double longitude_;
         string id_;
-        vector<Edge*> edges_;
+        vector<Edge*> edges_from_;
+        vector<Edge*> edges_to_;
 };

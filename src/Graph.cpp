@@ -27,6 +27,10 @@ void Graph::makeGraph(string nodefile, string edgefile) {
         i->setFrom(nodemap_[from]);
         i->setTo(nodemap_[to]);
 
+        // Connect nodes to edges
+        nodemap_[from]->addEdgeFrom(i);
+        nodemap_[to]->addEdgeTo(i);
+
     }
 
 
