@@ -15,4 +15,6 @@ class Graph {
         void connect(Edge* input);
 
         map<string, Node*> nodemap_;
+        vector<Node*> nodes_;
+        vector<Edge*> edges_;
 };

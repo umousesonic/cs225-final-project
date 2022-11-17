@@ -31,5 +31,4 @@ class Edge {
         string to_id_;
         Node* from_node_;
         Node* to_node_;
-
 };

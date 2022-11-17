@@ -1,4 +1,3 @@
-
 #include "Graph.h"
 #include "Parser.h"
 #include "Flight.h"
@@ -10,14 +9,14 @@ Graph::Graph() {
 void Graph::makeGraph(string nodefile, string edgefile) {
     Parser p_node(nodefile);
     Parser p_edge(edgefile);
-    vector<Node*> nodes = p_node.parseNodes();
-    vector<Edge*> edges = p_node.parseEdges();
+    nodes_ = p_node.parseNodes();
+    edges_ = p_node.parseEdges();
 
-    for (auto i : nodes) {
+    for (auto i : nodes_) {
         nodemap_[i->getId()] = i;
     }
 
-    for (auto i : edges) {
+    for (auto i : edges_) {
         // get node ids
         string from, to;
         from = i->getFromID();
@@ -30,17 +29,5 @@ void Graph::makeGraph(string nodefile, string edgefile) {
         // Connect nodes to edges
         nodemap_[from]->addEdgeFrom(i);
         nodemap_[to]->addEdgeTo(i);
-
     }
-
-
-
 }
-
-//void Graph::connect(Edge* input) {
-//    for (unsigned i = 0; i < input->countFlights(); i++) {
-//        Flight* test = input->getFlight(i);
-//        Node* airport = nodemap_[test->getId()];
-//        airport->addEdge(input);
-//    }
-//}
