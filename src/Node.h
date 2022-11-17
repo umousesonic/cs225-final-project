@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Edge.h"
 
 #include <iostream>
@@ -8,15 +7,16 @@
 
 using namespace std;
 
+class Edge;
 class Node {
     public: 
         Node();
         Node(double latitude, double longitude, string id);
         double getLatitude();
         double getLongitude();
+        string getId();
         void addEdgeFrom(Edge* edge);
         void addEdgeTo(Edge* edge);
-        string getId();
 
     private:
         double latitude_;
