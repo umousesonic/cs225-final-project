@@ -10,4 +10,7 @@ class Graph {
     
     private:
         void makeGraph();
+        void connect(Edge* input);
+        
+        map<string, Node*> nodeMap_;
 };

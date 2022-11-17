@@ -10,6 +10,8 @@ class Edge {
     public:
         Edge();
         void addFlight(Flight* flight);
+        Flight* getFlight(size_t index);
+        size_t countFlights();
 
     private:
         vector<Flight*> flights_;

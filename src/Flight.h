@@ -9,6 +9,9 @@ using namespace std;
 class Flight {
     public:
         Flight(string id, string from, string to);
+        string getId();
+        string getFrom();
+        string getTo();
 
     private:
         string id_; 
