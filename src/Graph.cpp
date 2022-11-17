@@ -37,10 +37,10 @@ void Graph::makeGraph(string nodefile, string edgefile) {
 
 }
 
-void Graph::connect(Edge* input) {
-    for (unsigned i = 0; i < input->countFlights(); i++) {
-        Flight* test = input->getFlight(i);
-        Node* airport = nodeMap_[test->getId()];
-        airport->addEdge(input);
-    }
-}
+//void Graph::connect(Edge* input) {
+//    for (unsigned i = 0; i < input->countFlights(); i++) {
+//        Flight* test = input->getFlight(i);
+//        Node* airport = nodemap_[test->getId()];
+//        airport->addEdge(input);
+//    }
+//}

@@ -11,7 +11,7 @@ class Graph {
         Graph();
     
     private:
-        void makeGraph();
+        void makeGraph(string nodefile, string edgefile);
         void connect(Edge* input);
 
         map<string, Node*> nodemap_;
