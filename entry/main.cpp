@@ -12,10 +12,12 @@ int main() {
     Parser myparser;
     myparser.readFile("../data/airports.dat.txt");
     //myparser.printCsvector();
+    /*
     vector<Node*> output = myparser.parseNodes();
     for (int i = 0; i < 5; i++) {
         cout << output[i]->getLatitude() << endl;
     }
+    */
     Parser edgeParser;
     edgeParser.readFile("../data/routes.dat.txt");
     vector<Edge*> edgepointers = edgeParser.parseEdges();
