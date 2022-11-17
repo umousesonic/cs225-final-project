@@ -79,6 +79,8 @@ vector<Edge*> Parser::parseEdges() {
         } else {
             edgemap.insert(std::pair<string, Edge*>(pair1, new Edge()));
             edgemap.at(pair1)->addFlight(insertion);
+            edgemap.at(pair1)->setFromID(csvector_[i]->at(3));
+            edgemap.at(pair1)->setToID(csvector_[i]->at(5));
         }
     }
     vector<Edge*> edges;
