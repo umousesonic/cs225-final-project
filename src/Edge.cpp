@@ -1,7 +1,7 @@
 #include "Edge.h"
 
 Edge::Edge() {
-    
+
 }
 
 void Edge::addFlight(Flight* flight) {
@@ -15,3 +15,4 @@ Flight* Edge::getFlight(size_t index) {
 size_t Edge::countFlights() {
     return flights_.size();
 }
+
