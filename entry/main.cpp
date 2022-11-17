@@ -16,5 +16,17 @@ int main() {
     for (int i = 0; i < 5; i++) {
         cout << output[i]->getLatitude() << endl;
     }
+    Parser edgeParser;
+    edgeParser.readFile("../data/routes.dat.txt");
+    vector<Edge*> edgepointers = edgeParser.parseEdges();
+    cout << edgepointers.size() << endl;
+    for(size_t i = 0; i < edgepointers.size(); i++) {
+        for(size_t j = 0; j < edgepointers.at(i)->countFlights(); j++) {
+            cout << edgepointers.at(i)->getFlight(j)->getId() << "  ";
+            cout << edgepointers.at(i)->getFlight(j)->getFrom() << "  ";
+            cout << edgepointers.at(i)->getFlight(j)->getTo() << endl;
+        }
+        //cout << edgepointers.at(i)->getFlight(0)->getSource() << endl;
+    }
     return 0;
 }
