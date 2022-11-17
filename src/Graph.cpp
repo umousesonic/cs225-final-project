@@ -1,11 +1,35 @@
 
 #include "Graph.h"
+#include "Parser.h"
+#include "Flight.h"
 
 Graph::Graph() {
     
 }
 
-void Graph::makeGraph() {
+void Graph::makeGraph(string nodefile, string edgefile) {
+    Parser p_node(nodefile);
+    Parser p_edge(edgefile);
+    vector<Node*> nodes = p_node.parseNodes();
+    vector<Edge*> edges = p_node.parseEdges();
+
+    for (auto i : nodes) {
+        nodemap_[i->getId()] = i;
+    }
+
+    for (auto i : edges) {
+        // get node ids
+        string from, to;
+        from = i->getFromID();
+        to = i->getToID();
+
+        // Add nodes
+        i->setFrom(nodemap_[from]);
+        i->setTo(nodemap_[to]);
+
+    }
+
+
 
 }
 

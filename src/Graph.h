@@ -3,7 +3,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <map>
 
+using namespace std;
 class Graph {
     public:
         Graph();
@@ -11,6 +13,6 @@ class Graph {
     private:
         void makeGraph();
         void connect(Edge* input);
-        
-        map<string, Node*> nodeMap_;
+
+        map<string, Node*> nodemap_;
 };
