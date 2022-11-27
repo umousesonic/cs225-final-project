@@ -6,6 +6,10 @@ Graph::Graph() {
     
 }
 
+Graph::Graph(string nodefile, string edgefile) {
+    makeGraph(nodefile, edgefile);
+}
+
 void Graph::makeGraph(string nodefile, string edgefile) {
     Parser p_node(nodefile);
     Parser p_edge(edgefile);
@@ -31,3 +35,5 @@ void Graph::makeGraph(string nodefile, string edgefile) {
         nodemap_[to]->addEdgeTo(i);
     }
 }
+
+

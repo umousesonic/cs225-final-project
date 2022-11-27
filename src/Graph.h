@@ -9,6 +9,9 @@ using namespace std;
 class Graph {
     public:
         Graph();
+        Graph(string nodefile, string edgefile);
+        vector<Node*> getNodes() { return nodes_; }
+        vector<Edge*> getEdges() { return edges_; }
     
     private:
         void makeGraph(string nodefile, string edgefile);
