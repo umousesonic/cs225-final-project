@@ -1,7 +1,6 @@
 #include "Edge.h"
 
 Edge::Edge() {
-
 }
 
 void Edge::addFlight(Flight* flight) {

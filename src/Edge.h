@@ -20,8 +20,8 @@ class Edge {
         string getToID() { return to_id_; };
         Node* getFromNode() { return from_node_; };
         Node* getToNode() { return to_node_; };
-        void setFromID(string id) { to_id_ = id; };
-        void setToID(string id) { from_id_ = id; };
+        void setFromID(string id) { from_id_ = id; };
+        void setToID(string id) { to_id_ = id; };
         void setFromNode(Node* n) { from_node_ = n; };
         void setToNode(Node* n) { to_node_ = n; };
 
