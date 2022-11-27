@@ -21,6 +21,7 @@ class Parser {
         // vector<Node*> parseRoutes(); // ??????????
 
         void printCsvector();
+        vector<vector<string>*> getCsvector();
 
     private:
         vector<vector<string>*> csvector_;

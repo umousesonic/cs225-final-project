@@ -61,6 +61,17 @@ void Parser::printCsvector() {
     }
 }
 
+
+/* getCsvector()
+ * return csvector_ for debugging.
+ * parameters: none
+ * returns: none
+ * return the entire csvector for debugging.
+ */
+vector<vector<string>*> Parser::getCsvector() {
+    return csvector_;
+}
+
 vector<Edge*> Parser::parseEdges() {
     //Plan: get airline id, source airport id, destination id.
     //std::vector<Edge*> edges;
